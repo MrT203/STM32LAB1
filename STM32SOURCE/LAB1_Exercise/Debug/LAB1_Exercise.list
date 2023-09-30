@@ -479,8 +479,8 @@ int main(void)
 
 	  }
 
-	  HAL_Delay(10000);
- 80003ee:	f242 7010 	movw	r0, #10000	; 0x2710
+	  HAL_Delay(1000);
+ 80003ee:	f44f 707a 	mov.w	r0, #1000	; 0x3e8
  80003f2:	f000 f961 	bl	80006b8 <HAL_Delay>
 	  switch(currentState){
  80003f6:	e7a2      	b.n	800033e <main+0x16>
