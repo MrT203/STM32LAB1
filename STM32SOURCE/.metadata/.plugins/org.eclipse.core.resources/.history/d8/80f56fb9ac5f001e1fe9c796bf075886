@@ -256,7 +256,6 @@ int main(void)
   {
 	  if (counter >= 10) counter = 0;
 	  display7SEG(counter++);
-
 	  switch(currentState){
 	  case RED2_GREEN1: {
 		  turnOnLight(RED2);
