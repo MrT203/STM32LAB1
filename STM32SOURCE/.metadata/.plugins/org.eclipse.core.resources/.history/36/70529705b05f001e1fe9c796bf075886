@@ -119,9 +119,9 @@ void turnOnLight(enum modeLed led){
 		}
 	}
 }
-void display7SEG(int counter){
+void display7SEG(int count){
 
-	if (counter == 0){
+	if (count == 0){
 		HAL_GPIO_WritePin(A_GPIO_Port, A_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(B_GPIO_Port, B_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(C_GPIO_Port, C_Pin, GPIO_PIN_RESET);
@@ -131,7 +131,7 @@ void display7SEG(int counter){
 		HAL_GPIO_WritePin(G_GPIO_Port, G_Pin, GPIO_PIN_SET);
 
 	}
-	else if (counter == 1){
+	else if (count == 1){
 		HAL_GPIO_WritePin(A_GPIO_Port, A_Pin, GPIO_PIN_SET);
 		HAL_GPIO_WritePin(B_GPIO_Port, B_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(C_GPIO_Port, C_Pin, GPIO_PIN_RESET);
@@ -140,7 +140,7 @@ void display7SEG(int counter){
 		HAL_GPIO_WritePin(F_GPIO_Port, F_Pin, GPIO_PIN_SET);
 		HAL_GPIO_WritePin(G_GPIO_Port, G_Pin, GPIO_PIN_SET);
 	}
-	else if (counter == 2){
+	else if (count == 2){
 		HAL_GPIO_WritePin(A_GPIO_Port, A_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(B_GPIO_Port, B_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(C_GPIO_Port, C_Pin, GPIO_PIN_SET);
@@ -149,7 +149,7 @@ void display7SEG(int counter){
 		HAL_GPIO_WritePin(F_GPIO_Port, F_Pin, GPIO_PIN_SET);
 		HAL_GPIO_WritePin(G_GPIO_Port, G_Pin, GPIO_PIN_RESET);
 	}
-	else if (counter == 3){
+	else if (count == 3){
 		HAL_GPIO_WritePin(A_GPIO_Port, A_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(B_GPIO_Port, B_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(C_GPIO_Port, C_Pin, GPIO_PIN_RESET);
@@ -158,7 +158,7 @@ void display7SEG(int counter){
 		HAL_GPIO_WritePin(F_GPIO_Port, F_Pin, GPIO_PIN_SET);
 		HAL_GPIO_WritePin(G_GPIO_Port, G_Pin, GPIO_PIN_RESET);
 	}
-	else if (counter == 4){
+	else if (count == 4){
 		HAL_GPIO_WritePin(A_GPIO_Port, A_Pin, GPIO_PIN_SET);
 		HAL_GPIO_WritePin(B_GPIO_Port, B_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(C_GPIO_Port, C_Pin, GPIO_PIN_RESET);
@@ -167,7 +167,7 @@ void display7SEG(int counter){
 		HAL_GPIO_WritePin(F_GPIO_Port, F_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(G_GPIO_Port, G_Pin, GPIO_PIN_RESET);
 	}
-	else if(counter == 5){
+	else if(count == 5){
 		HAL_GPIO_WritePin(A_GPIO_Port, A_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(B_GPIO_Port, B_Pin, GPIO_PIN_SET);
 		HAL_GPIO_WritePin(C_GPIO_Port, C_Pin, GPIO_PIN_RESET);
@@ -176,7 +176,7 @@ void display7SEG(int counter){
 		HAL_GPIO_WritePin(F_GPIO_Port, F_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(G_GPIO_Port, G_Pin, GPIO_PIN_RESET);
 	}
-	else if (counter == 6){
+	else if (count == 6){
 		HAL_GPIO_WritePin(A_GPIO_Port, A_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(B_GPIO_Port, B_Pin, GPIO_PIN_SET);
 		HAL_GPIO_WritePin(C_GPIO_Port, C_Pin, GPIO_PIN_RESET);
@@ -185,7 +185,7 @@ void display7SEG(int counter){
 		HAL_GPIO_WritePin(F_GPIO_Port, F_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(G_GPIO_Port, G_Pin, GPIO_PIN_RESET);
 	}
-	else if (counter == 7){
+	else if (count == 7){
 		HAL_GPIO_WritePin(A_GPIO_Port, A_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(B_GPIO_Port, B_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(C_GPIO_Port, C_Pin, GPIO_PIN_RESET);
@@ -194,7 +194,7 @@ void display7SEG(int counter){
 		HAL_GPIO_WritePin(F_GPIO_Port, F_Pin, GPIO_PIN_SET);
 		HAL_GPIO_WritePin(G_GPIO_Port, G_Pin, GPIO_PIN_SET);
 	}
-	else if (counter == 8){
+	else if (count == 8){
 		HAL_GPIO_WritePin(A_GPIO_Port, A_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(B_GPIO_Port, B_Pin, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(C_GPIO_Port, C_Pin, GPIO_PIN_RESET);
@@ -300,7 +300,7 @@ int main(void)
 
 	  }
 
-	  HAL_Delay(1000);
+	  HAL_Delay(100);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

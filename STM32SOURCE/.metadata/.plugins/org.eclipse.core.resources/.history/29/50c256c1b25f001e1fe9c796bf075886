@@ -61,64 +61,64 @@ static void MX_GPIO_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void turnOnLight(enum modeLed led){
-	switch (led){
-		case RED1: {
-			HAL_GPIO_WritePin(RED1_GPIO_Port, RED1_Pin, GPIO_PIN_SET);
-			HAL_GPIO_WritePin(RED3_GPIO_Port, RED3_Pin, GPIO_PIN_SET);
-			HAL_GPIO_WritePin(YELLOW1_GPIO_Port, YELLOW1_Pin, GPIO_PIN_RESET);
-			HAL_GPIO_WritePin(YELLOW3_GPIO_Port, YELLOW3_Pin, GPIO_PIN_RESET);
-			HAL_GPIO_WritePin(GREEN1_GPIO_Port, GREEN1_Pin, GPIO_PIN_RESET);
-			HAL_GPIO_WritePin(GREEN3_GPIO_Port, GREEN3_Pin, GPIO_PIN_RESET);
-			break;
-		}
-		case YELLOW1: {
-			HAL_GPIO_WritePin(YELLOW1_GPIO_Port, YELLOW1_Pin, GPIO_PIN_SET);
-			HAL_GPIO_WritePin(YELLOW3_GPIO_Port, YELLOW3_Pin, GPIO_PIN_SET);
-			HAL_GPIO_WritePin(RED1_GPIO_Port, RED1_Pin, GPIO_PIN_RESET);
-			HAL_GPIO_WritePin(RED3_GPIO_Port, RED3_Pin, GPIO_PIN_RESET);
-			HAL_GPIO_WritePin(GREEN1_GPIO_Port, GREEN1_Pin, GPIO_PIN_RESET);
-			HAL_GPIO_WritePin(GREEN3_GPIO_Port, GREEN3_Pin, GPIO_PIN_RESET);
-			break;
-		}
-		case GREEN1: {
-			HAL_GPIO_WritePin(GREEN1_GPIO_Port, GREEN1_Pin, GPIO_PIN_SET);
-			HAL_GPIO_WritePin(GREEN3_GPIO_Port, GREEN3_Pin, GPIO_PIN_SET);
-			HAL_GPIO_WritePin(YELLOW1_GPIO_Port, YELLOW1_Pin, GPIO_PIN_RESET);
-			HAL_GPIO_WritePin(YELLOW3_GPIO_Port, YELLOW3_Pin, GPIO_PIN_RESET);
-			HAL_GPIO_WritePin(RED1_GPIO_Port, RED1_Pin, GPIO_PIN_RESET);
-			HAL_GPIO_WritePin(RED3_GPIO_Port, RED3_Pin, GPIO_PIN_RESET);
-			break;
-		}
-		case RED2: {
-			HAL_GPIO_WritePin(RED2_GPIO_Port, RED2_Pin, GPIO_PIN_SET);
-			HAL_GPIO_WritePin(RED4_GPIO_Port, RED4_Pin, GPIO_PIN_SET);
-			HAL_GPIO_WritePin(YELLOW2_GPIO_Port, YELLOW2_Pin, GPIO_PIN_RESET);
-			HAL_GPIO_WritePin(YELLOW4_GPIO_Port, YELLOW4_Pin, GPIO_PIN_RESET);
-			HAL_GPIO_WritePin(GREEN2_GPIO_Port, GREEN2_Pin, GPIO_PIN_RESET);
-			HAL_GPIO_WritePin(GREEN4_GPIO_Port, GREEN4_Pin, GPIO_PIN_RESET);
-			break;
-		}
-		case YELLOW2: {
-			HAL_GPIO_WritePin(YELLOW2_GPIO_Port, YELLOW2_Pin, GPIO_PIN_SET);
-			HAL_GPIO_WritePin(YELLOW4_GPIO_Port, YELLOW4_Pin, GPIO_PIN_SET);
-			HAL_GPIO_WritePin(RED2_GPIO_Port, RED2_Pin, GPIO_PIN_RESET);
-			HAL_GPIO_WritePin(RED4_GPIO_Port, RED4_Pin, GPIO_PIN_RESET);
-			HAL_GPIO_WritePin(GREEN2_GPIO_Port, GREEN2_Pin, GPIO_PIN_RESET);
-			HAL_GPIO_WritePin(GREEN4_GPIO_Port, GREEN4_Pin, GPIO_PIN_RESET);
-			break;
-		}
-
-		default : {
-			HAL_GPIO_WritePin(GREEN2_GPIO_Port, GREEN2_Pin, GPIO_PIN_SET);
-			HAL_GPIO_WritePin(GREEN4_GPIO_Port, GREEN4_Pin, GPIO_PIN_SET);
-			HAL_GPIO_WritePin(YELLOW2_GPIO_Port, YELLOW2_Pin, GPIO_PIN_RESET);
-			HAL_GPIO_WritePin(YELLOW4_GPIO_Port, YELLOW4_Pin, GPIO_PIN_RESET);
-			HAL_GPIO_WritePin(RED2_GPIO_Port, RED2_Pin, GPIO_PIN_RESET);
-			HAL_GPIO_WritePin(RED4_GPIO_Port, RED4_Pin, GPIO_PIN_RESET);
-		}
-	}
-}
+//void turnOnLight(enum modeLed led){
+//	switch (led){
+//		case RED1: {
+//			HAL_GPIO_WritePin(RED1_GPIO_Port, RED1_Pin, GPIO_PIN_SET);
+//			HAL_GPIO_WritePin(RED3_GPIO_Port, RED3_Pin, GPIO_PIN_SET);
+//			HAL_GPIO_WritePin(YELLOW1_GPIO_Port, YELLOW1_Pin, GPIO_PIN_RESET);
+//			HAL_GPIO_WritePin(YELLOW3_GPIO_Port, YELLOW3_Pin, GPIO_PIN_RESET);
+//			HAL_GPIO_WritePin(GREEN1_GPIO_Port, GREEN1_Pin, GPIO_PIN_RESET);
+//			HAL_GPIO_WritePin(GREEN3_GPIO_Port, GREEN3_Pin, GPIO_PIN_RESET);
+//			break;
+//		}
+//		case YELLOW1: {
+//			HAL_GPIO_WritePin(YELLOW1_GPIO_Port, YELLOW1_Pin, GPIO_PIN_SET);
+//			HAL_GPIO_WritePin(YELLOW3_GPIO_Port, YELLOW3_Pin, GPIO_PIN_SET);
+//			HAL_GPIO_WritePin(RED1_GPIO_Port, RED1_Pin, GPIO_PIN_RESET);
+//			HAL_GPIO_WritePin(RED3_GPIO_Port, RED3_Pin, GPIO_PIN_RESET);
+//			HAL_GPIO_WritePin(GREEN1_GPIO_Port, GREEN1_Pin, GPIO_PIN_RESET);
+//			HAL_GPIO_WritePin(GREEN3_GPIO_Port, GREEN3_Pin, GPIO_PIN_RESET);
+//			break;
+//		}
+//		case GREEN1: {
+//			HAL_GPIO_WritePin(GREEN1_GPIO_Port, GREEN1_Pin, GPIO_PIN_SET);
+//			HAL_GPIO_WritePin(GREEN3_GPIO_Port, GREEN3_Pin, GPIO_PIN_SET);
+//			HAL_GPIO_WritePin(YELLOW1_GPIO_Port, YELLOW1_Pin, GPIO_PIN_RESET);
+//			HAL_GPIO_WritePin(YELLOW3_GPIO_Port, YELLOW3_Pin, GPIO_PIN_RESET);
+//			HAL_GPIO_WritePin(RED1_GPIO_Port, RED1_Pin, GPIO_PIN_RESET);
+//			HAL_GPIO_WritePin(RED3_GPIO_Port, RED3_Pin, GPIO_PIN_RESET);
+//			break;
+//		}
+//		case RED2: {
+//			HAL_GPIO_WritePin(RED2_GPIO_Port, RED2_Pin, GPIO_PIN_SET);
+//			HAL_GPIO_WritePin(RED4_GPIO_Port, RED4_Pin, GPIO_PIN_SET);
+//			HAL_GPIO_WritePin(YELLOW2_GPIO_Port, YELLOW2_Pin, GPIO_PIN_RESET);
+//			HAL_GPIO_WritePin(YELLOW4_GPIO_Port, YELLOW4_Pin, GPIO_PIN_RESET);
+//			HAL_GPIO_WritePin(GREEN2_GPIO_Port, GREEN2_Pin, GPIO_PIN_RESET);
+//			HAL_GPIO_WritePin(GREEN4_GPIO_Port, GREEN4_Pin, GPIO_PIN_RESET);
+//			break;
+//		}
+//		case YELLOW2: {
+//			HAL_GPIO_WritePin(YELLOW2_GPIO_Port, YELLOW2_Pin, GPIO_PIN_SET);
+//			HAL_GPIO_WritePin(YELLOW4_GPIO_Port, YELLOW4_Pin, GPIO_PIN_SET);
+//			HAL_GPIO_WritePin(RED2_GPIO_Port, RED2_Pin, GPIO_PIN_RESET);
+//			HAL_GPIO_WritePin(RED4_GPIO_Port, RED4_Pin, GPIO_PIN_RESET);
+//			HAL_GPIO_WritePin(GREEN2_GPIO_Port, GREEN2_Pin, GPIO_PIN_RESET);
+//			HAL_GPIO_WritePin(GREEN4_GPIO_Port, GREEN4_Pin, GPIO_PIN_RESET);
+//			break;
+//		}
+//
+//		default : {
+//			HAL_GPIO_WritePin(GREEN2_GPIO_Port, GREEN2_Pin, GPIO_PIN_SET);
+//			HAL_GPIO_WritePin(GREEN4_GPIO_Port, GREEN4_Pin, GPIO_PIN_SET);
+//			HAL_GPIO_WritePin(YELLOW2_GPIO_Port, YELLOW2_Pin, GPIO_PIN_RESET);
+//			HAL_GPIO_WritePin(YELLOW4_GPIO_Port, YELLOW4_Pin, GPIO_PIN_RESET);
+//			HAL_GPIO_WritePin(RED2_GPIO_Port, RED2_Pin, GPIO_PIN_RESET);
+//			HAL_GPIO_WritePin(RED4_GPIO_Port, RED4_Pin, GPIO_PIN_RESET);
+//		}
+//	}
+//}
 void display7SEG(int counter){
 
 	if (counter == 0){
@@ -251,54 +251,54 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   int count = 3;
-  int counter = 0;
+  int dem = 0;
   while (1)
   {
-	  if (counter >= 10) counter = 0;
-	  display7SEG(counter++);
+	  if (dem >= 10) dem = 0;
+	  display7SEG(dem++);
 
-	  switch(currentState){
-	  case RED2_GREEN1: {
-		  turnOnLight(RED2);
-		  turnOnLight(GREEN1);
-		  count--;
-		  if (count <= 0){
-			  count = 2;
-			  currentState = RED2_YELLOW1;
-		  }
-		  break;
-	  }
-	  case RED2_YELLOW1: {
-		  turnOnLight(RED2);
-		  turnOnLight(YELLOW1);
-		  count--;
-		  if (count <= 0){
-		  	  count = 3;
-		  	  currentState = RED1_GREEN2;
-		  }
-		  break;
-	  }
-	  case RED1_GREEN2: {
-		  turnOnLight(RED1);
-		  turnOnLight(GREEN2);
-		  count--;
-		  if (count <= 0){
-		  	  count = 2;
-		  	  currentState = RED1_YELLOW2;
-		  }
-		  break;
-	  }
-	  default : {
-		  turnOnLight(RED1);
-		  turnOnLight(YELLOW2);
-		  count--;
-		  if (count <= 0){
-			  count = 3;
-			  currentState = RED2_GREEN1;
-		  }
-	  }
-
-	  }
+//	  switch(currentState){
+//	  case RED2_GREEN1: {
+//		  turnOnLight(RED2);
+//		  turnOnLight(GREEN1);
+//		  count--;
+//		  if (count <= 0){
+//			  count = 2;
+//			  currentState = RED2_YELLOW1;
+//		  }
+//		  break;
+//	  }
+//	  case RED2_YELLOW1: {
+//		  turnOnLight(RED2);
+//		  turnOnLight(YELLOW1);
+//		  count--;
+//		  if (count <= 0){
+//		  	  count = 3;
+//		  	  currentState = RED1_GREEN2;
+//		  }
+//		  break;
+//	  }
+//	  case RED1_GREEN2: {
+//		  turnOnLight(RED1);
+//		  turnOnLight(GREEN2);
+//		  count--;
+//		  if (count <= 0){
+//		  	  count = 2;
+//		  	  currentState = RED1_YELLOW2;
+//		  }
+//		  break;
+//	  }
+//	  default : {
+//		  turnOnLight(RED1);
+//		  turnOnLight(YELLOW2);
+//		  count--;
+//		  if (count <= 0){
+//			  count = 3;
+//			  currentState = RED2_GREEN1;
+//		  }
+//	  }
+//
+//	  }
 
 	  HAL_Delay(1000);
     /* USER CODE END WHILE */

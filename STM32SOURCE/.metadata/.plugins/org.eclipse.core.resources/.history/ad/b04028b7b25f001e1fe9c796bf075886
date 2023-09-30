@@ -251,11 +251,11 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   int count = 3;
-  int counter = 0;
+  int dem = 0;
   while (1)
   {
-	  if (counter >= 10) counter = 0;
-	  display7SEG(counter++);
+	  if (dem >= 10) dem = 0;
+	  display7SEG(dem++);
 
 	  switch(currentState){
 	  case RED2_GREEN1: {
