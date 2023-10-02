@@ -162,13 +162,14 @@ int seconds = 0, minutes = 0, hours = 0;
 int t = 0;
 void displayOnClock(int num){
   if(num <= 12){
-    if (num-1 == t || num-1 == hours) setNumberOnClock(num);
+    if (num - 1 == t || num - 1 == hours) setNumberOnClock(num);
     else{
      setNumberOffClock(num-1);
      setNumberOnClock(num);
     }
   }
 }
+
 
 int main(void)
 {
@@ -200,32 +201,41 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  int i = 0;
   while (1)
-    {
-  	  if (hours == 0) displayOnClock(0);
-  	  else displayOnClock(hours);
+  {
 
-  	  // kim phut
-  	  t=minutes/5;
-  	  if (t == 0) displayOnClock(0);
-  	  else displayOnClock(t);
+	  if (hours == 0) displayOnClock(0);
+	  else displayOnClock(hours);
+	  t=minutes/5;
+	  if (t == 0) displayOnClock(0);
+	  else displayOnClock(t);
 
-  	    for(int i = 0; i < 60; i++){
-  	      seconds = i/5;
-  	      if (seconds == 0) displayOnClock(0);
-  	      else{
-  	    	displayOnClock(seconds);
-  	      }
-  	      HAL_Delay(10);
-  	    }
+	    if (i < 60){
+	    	seconds = i/5;
+	    	if (seconds == 0) displayOnClock(0);
+	    	else{
+	    		if (t == 0 || hours == 0) displayOnClock(seconds);
+	    		else{
 
-  	    minutes++;
-  	    if (minutes == 60){
-  	      hours++;
-  	      minutes = 0;
-  	    if (hours==12) hours = 0;
-  	    }
+	    		     displayOnClock(seconds);
+	    		    }
+	    	}
+	    	i++;
+	    }
+	    else {
+	    	i = 0;
+	    	minutes++;
+	    	if (minutes == 60){
+	    		 hours++;
+	    		 minutes = 0;
+	    	if (hours == 12 ) hours = 0;
+	    	}
+	    }
 
+
+
+	 HAL_Delay(10);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
