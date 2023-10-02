@@ -204,12 +204,14 @@ int main(void)
   int i = 0;
   while (1)
   {
-
+	  // display hour
 	  displayOnClock(hours);
 
+	  // display minute
 	  t=minutes/5;
 	  displayOnClock(t);
 
+	  // display second
 	    if (i < 60){
 	    	seconds = i/5;
 	    	displayOnClock(seconds);
