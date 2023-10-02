@@ -205,22 +205,14 @@ int main(void)
   while (1)
   {
 
-	  if (hours == 0) displayOnClock(0);
-	  else displayOnClock(hours);
+	  displayOnClock(hours);
+
 	  t=minutes/5;
-	  if (t == 0) displayOnClock(0);
-	  else displayOnClock(t);
+	  displayOnClock(t);
 
 	    if (i < 60){
 	    	seconds = i/5;
-	    	if (seconds == 0) displayOnClock(0);
-	    	else{
-	    		if (t == 0 || hours == 0) displayOnClock(seconds);
-	    		else{
-
-	    		     displayOnClock(seconds);
-	    		    }
-	    	}
+	    	displayOnClock(seconds);
 	    	i++;
 	    }
 	    else {
@@ -232,8 +224,6 @@ int main(void)
 	    	if (hours == 12 ) hours = 0;
 	    	}
 	    }
-
-
 
 	 HAL_Delay(10);
     /* USER CODE END WHILE */
